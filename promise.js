@@ -2,11 +2,11 @@ const { promiseTheaterIXX, promiseTheaterVGC } = require("./external.js");
 
 // TODO: Buat fungsi promiseOutput sesuai ketentuan readme
 
-function promiseOutput(emosi) {
+async function promiseOutput(emosi) {
     let bioskopMarah = 0;
     let bioskopTidakMarah = 0;
     if (emosi === 'marah') {
-        return promiseTheaterIXX().then((value) => {
+        return await promiseTheaterIXX().then((value) => {
             value.forEach((array) => {
                 if (array.hasil === emosi) {
                     bioskopMarah++;
@@ -23,7 +23,7 @@ function promiseOutput(emosi) {
         });
 
     } else if (emosi === 'tidak marah') {
-        return promiseTheaterIXX().then(value => {
+        return await promiseTheaterIXX().then(value => {
             value.forEach(array => {
                 if (array.hasil === emosi) {
                     bioskopTidakMarah++;
