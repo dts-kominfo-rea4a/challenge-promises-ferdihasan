@@ -2,7 +2,7 @@ const { promiseTheaterIXX, promiseTheaterVGC } = require("./external.js");
 
 // TODO: Buat fungsi promiseOutput sesuai ketentuan readme
 
-const promiseOutput = (emosi) => {
+function promiseOutput(emosi) {
     let bioskopMarah = 0;
     let bioskopTidakMarah = 0;
     if (emosi === 'marah') {
